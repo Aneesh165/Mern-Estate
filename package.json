@@ -7,13 +7,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node Api/index.js",
-    "dev":"nodemon Api/index.js"
+    "dev": "nodemon Api/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "mongoose": "^8.9.2",
     "nodemon": "^3.1.9"
   }
 }
