@@ -1,4 +1,4 @@
-import User from '../models/UserModel.js'
+import User from '../Models/UserModel.js'
 import bcrypt from 'bcrypt';
 import { errorHandler } from '../Utils/error.js';
 import jwt from 'jsonwebtoken';
@@ -65,6 +65,15 @@ export const google = async (req, res, next) => {
         .status(200)
         .json(rest);
     }
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const signOut = async (req, res, next) => {
+  try {
+    res.clearCookie('access_token');
+    res.status(200).json('User has been logged out!');
   } catch (error) {
     next(error);
   }
